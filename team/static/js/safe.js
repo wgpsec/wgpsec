@@ -1,55 +1,55 @@
-
-<!-- 禁止选择文本： -->
-function ifwgpsec(url){
-    // if (url.indexOf("wgpsec.com") > 0 || url.indexOf("wgpsec.org") > 0 || url.indexOf("wgpsec.t") > 0 ) {
-
-    //     return true;
-    // } else {
-    //     console.log("Hey you can not do it Go to wgpsec now ");
-    //    // document.location.href = "http://www.wgpsec.org";
-    //     return false;
-    // }
-}
-var omitformtags=["input", "textarea", "select"]
-
-omitformtags=omitformtags.join("|")
-
-function disableselect(e){
-    if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
-        return false
-}
-
-function reEnable(){
-    return true
-}
-
-if (typeof document.onselectstart!="undefined")
-    document.onselectstart=new Function ("return false")
-else{
-    document.onmousedown=disableselect
-    document.onmouseup=reEnable
-}
-
-function stop(){
-    return false;
-}
-document.oncontextmenu=stop;
-//add css and js
-function addJC (a,l) {
-    var css=['link','href','css/','.css','stylesheet', 'text/css'];
-    var js=['script','src','js/','.js','', ''];
-    var wjc=(l=='css')?css:js;
-    for (var i=0;i<=a.length-1;i++){
-        var jc = document.createElement(wjc[0]);
-        jc[wjc[1]] = wjc[2] + a[i] +wjc[3];
-        jc.rel = wjc[4];
-        jc.type = wjc[5];
-        document.getElementsByTagName('HEAD').item(0).appendChild(jc);
-    }
-}
-var url = document.location.href;
-ifwgpsec(url);
-
+//
+// <!-- 禁止选择文本： -->
+// function ifwgpsec(url){
+//     // if (url.indexOf("wgpsec.com") > 0 || url.indexOf("wgpsec.org") > 0 || url.indexOf("wgpsec.t") > 0 ) {
+//
+//     //     return true;
+//     // } else {
+//     //     console.log("Hey you can not do it Go to wgpsec now ");
+//     //    // document.location.href = "http://www.wgpsec.org";
+//     //     return false;
+//     // }
+// }
+// var omitformtags=["input", "textarea", "select"]
+//
+// omitformtags=omitformtags.join("|")
+//
+// function disableselect(e){
+//     if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+//         return false
+// }
+//
+// function reEnable(){
+//     return true
+// }
+//
+// if (typeof document.onselectstart!="undefined")
+//     document.onselectstart=new Function ("return false")
+// else{
+//     document.onmousedown=disableselect
+//     document.onmouseup=reEnable
+// }
+//
+// function stop(){
+//     return false;
+// }
+// document.oncontextmenu=stop;
+// //add css and js
+// function addJC (a,l) {
+//     var css=['link','href','css/','.css','stylesheet', 'text/css'];
+//     var js=['script','src','js/','.js','', ''];
+//     var wjc=(l=='css')?css:js;
+//     for (var i=0;i<=a.length-1;i++){
+//         var jc = document.createElement(wjc[0]);
+//         jc[wjc[1]] = wjc[2] + a[i] +wjc[3];
+//         jc.rel = wjc[4];
+//         jc.type = wjc[5];
+//         document.getElementsByTagName('HEAD').item(0).appendChild(jc);
+//     }
+// }
+// var url = document.location.href;
+// ifwgpsec(url);
+//
 
 
 console.log('Wolf Group Security Team  狼组安全团队');
