@@ -25,7 +25,7 @@ function ifwgpsec(url) {
     } else {
         console.log("Hey you can not do it Go to wgpsec now ");
         document.body.innerHTML="";
-        document.body.style.backgroundColor="red";
+        document.body.style.backgroundColor="green";
         document.body.style.backgroundImage="";
         document.write("<h1 style='color: red'>请使用正确方法进入网站，谢谢合作！！</h1>");
         //在改源码之前，可否加个QQ群 431598862 说下？
@@ -36,6 +36,8 @@ function ifwgpsec(url) {
         return false;
     }
 }
+var url = document.location.href;
+ifwgpsec(url);
 
 // var omitformtags=["input", "textarea", "select"]
 //
@@ -74,8 +76,7 @@ function ifwgpsec(url) {
 //         document.getElementsByTagName('HEAD').item(0).appendChild(jc);
 //     }
 // }
-var url = document.location.href;
-ifwgpsec(url);
+
 //
 
 
