@@ -19,25 +19,24 @@ var _hmt = _hmt || [];
 })();
 
 //Safe
-function ifwgpsec(url) {
-    if (url.indexOf("wgpsec.com") > 0 || url.indexOf("wgpsec.org") > 0 || url.indexOf("wgpsec.t") > 0) {
-        return true;
-    } else {
-        console.log("Hey you can not do it Go to wgpsec now ");
-        document.body.innerHTML="";
-        document.body.style.backgroundColor="green";
-        document.body.style.backgroundImage="";
-        document.write("<h1 style='color: red'>请使用正确方法进入网站，谢谢合作！！</h1>");
-        //在改源码之前，可否加个QQ群 431598862 说下？
-        setTimeout(function () {
-            document.location.href = "http://www.wgpsec.org?sig=WoSiMa:"+url;
-        }, 3000);
-
-        return false;
-    }
+function ifwgpsec() {
+    window.onload=function () {
+        var url = document.location.href;
+        if (url.indexOf("wgpsec.com") > 0 || url.indexOf("wgpsec.org") > 0 || url.indexOf("wgpsec.t") > 0) {
+        } else {
+            document.body.innerHTML=null;
+            document.body.style.backgroundColor="green";
+            document.body.style.backgroundImage="";
+            document.write("<h1 style='color: red'>请使用正确方法进入网站，谢谢合作！！</h1>");
+            //在改源码之前，可否加个QQ群 431598862 说下？
+            setTimeout(function () {
+                document.location.href = "http://www.wgpsec.org?sig=WoSiMa:"+url;
+            }, 3000);
+        }
+    };
 }
-var url = document.location.href;
 ifwgpsec(url);
+
 
 // var omitformtags=["input", "textarea", "select"]
 //
